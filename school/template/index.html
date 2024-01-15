@@ -1,0 +1,26 @@
+{% extends './base/base.html' %}
+
+
+{% block content %}
+<div class="container my-3">
+    <div class="alert bg-warning">
+        <h4 class="text-center">Create Student New Account</h4>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            {% include './msg.html' %}
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Create" class="btn btn-success w-100 mt-3">
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}
